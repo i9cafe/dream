@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="dream">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title> Dream comes true! </title>
+  <script src="angular.js"></script>
+  <script src="angular-route.js"></script>
+  <script src="ui-bootstrap-tpls-0.10.0.min.js"></script>
+  <script src="app.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+</head>
+
+<body ng-controller="MainController as vm" style="overflow-y:auto !important;">
+
+  <div class="row">
+    <div class="col-xs-12 container">
+      <div id="ball-1" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_1 === 'N'}" style="background: red;" ng-click="vm.changeBallState_1()" ng-dblclick="false">
+        <b class="ball-font"> 자 </b>
+      </div>
+
+      <div id="ball-2" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_2 === 'N'}" style="background: #ff4500;" ng-click="vm.changeBallState_2()" ng-dblclick="false">
+        <b class="ball-font"> 축 </b>
+      </div>
+
+      <div id="ball-3" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_3 === 'N'}" style="background: orange;" ng-click="vm.changeBallState_3()" ng-dblclick="false">
+        <b class="ball-font"> 인 </b>
+      </div>
+
+      <div id="ball-4" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_4 === 'N'}" style="background: #f5bd1f;" ng-click="vm.changeBallState_4()" ng-dblclick="false">
+        <b class="ball-font"> 묘 </b>
+      </div>
+
+      <div id="ball-5" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_5 === 'N'}" style="background: yellow;" ng-click="vm.changeBallState_5()" ng-dblclick="false">
+        <b class="ball-font"> 진 </b>
+      </div>
+
+      <div id="ball-6" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_6 === 'N'}" style="background: #9acd32;" ng-click="vm.changeBallState_6()" ng-dblclick="false">
+        <b class="ball-font"> 사 </b>
+      </div>
+
+      <div id="ball-7" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_7 === 'N'}" style="background: green;" ng-click="vm.changeBallState_7()" ng-dblclick="false">
+        <b class="ball-font"> 오 </b>
+      </div>
+
+      <div id="ball-8" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_8 === 'N'}" style="background: #0d98ba;" ng-click="vm.changeBallState_8()" ng-dblclick="false">
+        <b class="ball-font"> 미 </b>
+      </div>
+
+      <div id="ball-9" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_9 === 'N'}" style="background: skyblue;" ng-click="vm.changeBallState_9()" ng-dblclick="false">
+        <b class="ball-font"> 신 </b>
+      </div>
+
+      <div id="ball-10" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_10 === 'N'}" style="background: #8a2be2;" ng-click="vm.changeBallState_10()" ng-dblclick="false">
+        <b class="ball-font"> 유 </b>
+      </div>
+
+      <div id="ball-11" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_11 === 'N'}" style="background: violet;" ng-click="vm.changeBallState_11()" ng-dblclick="false">
+        <b class="ball-font"> 술 </b>
+      </div>
+
+      <div id="ball-12" class="col-xs-3 ball" ng-class="{'ball-unselected' : vm.ballState_12 === 'N'}" style="background: #bb3385;" ng-click="vm.changeBallState_12()" ng-dblclick="false">
+        <b class="ball-font"> 해 </b>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 container" style="padding-bottom: 0px">
+
+      <div id="button-1" class="col-xs-4 btn btn-fix" ng-click="vm.fixBalls()" ng-dblclick="false" style="width:30%; margin-left:2%;">
+        <div class="btn-font">
+          <i class="fa fa-fw fa-check-circle-o iconsBounce"></i>
+          <b> 지정 </b>
+        </div>
+      </div>
+
+      <div id="button-2" class="col-xs-4 btn btn-execute" ng-click="vm.execute()" ng-dblclick="false" style="width:30%; margin-left:3%;">
+        <div class="btn-font">
+          <i class="fa fa-fw fa-star iconsZigzag"></i>
+          <b> 실행 </b>
+        </div>
+      </div>
+
+      <div id="button-3" class="col-xs-4 btn btn-reset" ng-click="vm.reset()" ng-dblclick="false" style="width:30%; margin-left:3%;">
+        <div class="btn-font">
+          <i class="fa fa-fw fa-refresh iconsRotate"></i>
+          <b> 리셋 </b>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 container" style="padding-top: 0px;">
+      <div id="result-balls" class="col-xs-12 result-box">
+        <div class="col-xs-2 result-ball" ng-if="vm.result.length > 0" ng-style="{'color' : (vm.fixBallYn_1 === 'Y') ? 'fuchsia' : 'gold'}">
+          <b> {{vm.result.length > 0 ? vm.result[0] : ''}} </b>
+        </div>
+        <div class="col-xs-2 result-ball" ng-if="vm.result.length > 0" ng-style="{'color' : (vm.fixBallYn_2 === 'Y') ? 'fuchsia' : 'gold'}">
+          <b> {{vm.result.length > 0 ? vm.result[1] : ''}} </b>
+        </div>
+        <div class="col-xs-2 result-ball" ng-if="vm.result.length > 0" ng-style="{'color' : (vm.fixBallYn_3 === 'Y') ? 'fuchsia' : 'gold'}">
+          <b> {{vm.result.length > 0 ? vm.result[2] : ''}} </b>
+        </div>
+        <div class="col-xs-2 result-ball" ng-if="vm.result.length > 0" ng-style="{'color' : (vm.fixBallYn_4 === 'Y') ? 'fuchsia' : 'gold'}">
+          <b> {{vm.result.length > 0 ? vm.result[3] : ''}} </b>
+        </div>
+        <div class="col-xs-2 result-ball" ng-if="vm.result.length > 0" ng-style="{'color' : (vm.fixBallYn_5 === 'Y') ? 'fuchsia' : 'gold'}">
+          <b> {{vm.result.length > 0 ? vm.result[4] : ''}} </b>
+        </div>
+        <div class="col-xs-2 result-ball" ng-if="vm.result.length > 0" ng-style="{'color' : (vm.fixBallYn_6 === 'Y') ? 'fuchsia' : 'gold'}">
+          <b> {{vm.result.length > 0 ? vm.result[5] : ''}} </b>
+        </div>
+        <div class="col-xs-12 description-font" ng-if="vm.description">
+          {{vm.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 container" style="padding-top: 0px;">
+      <div id="button-4" class="col-xs-12 btn btn-show" ng-click="vm.showAllCases()" ng-dblclick="false">
+        <div class="btn-font">
+          <i class="fa fa-fw fa-search-plus iconsFlap"></i>
+          <b> 조합 확인 </b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 container" style="padding-top: 0px;">
+      <label style="margin-right:5px; margin-bottom: 0px; vertical-align: sub; font-size:22px;"> 중복 모드 </label>
+      <label class="switch-button--checkbox " style="vertical-align: middle; margin-bottom: 0px; margin-right:5px;">
+        <input type="checkbox" ng-model="vm.modeFlag" ng-change="vm.changeMode()" ng-true-value="true" ng-false-value="false">
+        <span class="switch-button-slider round"></span>
+      </label>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="dream">
+
+<head>
+  <meta charset="utf-8" />
+  <title> Dream comes true! </title>
+  <script src="angular.js"></script>
+  <script src="angular-route.js"></script>
+  <script src="ui-bootstrap-tpls-0.10.0.min.js"></script>
+  <script src="app.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+</head>
+
+<body ng-controller="LoginController as vm" style="overflow-y:auto !important;">
+
+  <div class="row">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-11">
+      <form id="login-form" method="post">
+
+        <div class="row">
+          <div class="col-xs-12" style="margin-top:100px; margin-bottom:20px;">
+            <b> Login </b>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12" style="margin-bottom:20px;">
+            <input id="id" type="text" placeholder="ID를 입력하세요.">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12" style="margin-bottom:20px;">
+            <input id="pw" type="password" placeholder="Password를 입력하세요.">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <button ng-click="vm.checkForm()" ng-dblclick="false"> 로그인 </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!-- Modal -->
+
+<div class="modal-header">
+  <h1 class="modal-title"> 조합 목록 (총 {{lists.length}}) </h1>
+</div>
+
+<div class="modal-body" style="overflow-y:auto; height:500px;">
+  <ul>
+    <li ng-repeat="list in lists" style="font-size: 20px !important;">
+      {{list.join(', ')}}
+    </li>
+  </ul>
+</div>
+
+<div class="modal-footer" style="display:flex; justify-content:center;">
+  <div class="result-button" style="width:100%;" ng-click="$dismiss()" ng-dblclick="false">
+    <div style="color:white; font-size:3rem !important;">
+      닫 기
+    </div>
+  </div>
+</div>

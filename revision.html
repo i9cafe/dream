@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="dream">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title> Dream comes true! </title>
+	<script src="angular.js"></script>
+	<script src="angular-route.js"></script>
+	<script src="ui-bootstrap-tpls-0.10.0.min.js"></script>
+	<script src="app.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="style.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="icon.png" />
+	<link rel="apple-touch-icon" href="icon.png" />
+</head>
+
+<body ng-controller="RevisionController as vm" style="overflow-y:auto;">
+	<div class="base-area">
+		<div class="dashed-line-area">
+			<div class="vertical-dashed-line">
+			</div>
+			<div class="horizontal-dashed-line">
+			</div>
+		</div>
+		<div class="ball-bundle-area">
+			<div class="ball-bundle-row">
+				<div id="box1" class="number-check-box" ng-click="vm.changeBox1UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box1UseAt === 'N'}" ng-style="{'transform' : vm.box1UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box1UseAt === 'N'}">
+						1
+					</div>
+				</div>
+				<div id="box2" class="number-check-box" ng-click="vm.changeBox2UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box2UseAt === 'N'}" ng-style="{'transform' : vm.box2UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box2UseAt === 'N'}">
+						2
+					</div>
+				</div>
+				<div id="box3" class="number-check-box" ng-click="vm.changeBox3UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box3UseAt === 'N'}" ng-style="{'transform' : vm.box3UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box3UseAt === 'N'}">
+						3
+					</div>
+				</div>
+				<div id="box4" class="number-check-box" ng-click="vm.changeBox4UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box4UseAt === 'N'}" ng-style="{'transform' : vm.box4UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box4UseAt === 'N'}">
+						4
+					</div>
+				</div>
+				<div id="box5" class="number-check-box" ng-click="vm.changeBox5UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box5UseAt === 'N'}" ng-style="{'transform' : vm.box5UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box5UseAt === 'N'}">
+						5
+					</div>
+				</div>
+				<div id="box6" class="number-check-box" ng-click="vm.changeBox6UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box6UseAt === 'N'}" ng-style="{'transform' : vm.box6UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box6UseAt === 'N'}">
+						6
+					</div>
+				</div>
+				<div id="box7" class="number-check-box" ng-click="vm.changeBox7UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box7UseAt === 'N'}" ng-style="{'transform' : vm.box7UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box7UseAt === 'N'}">
+						7
+					</div>
+				</div>
+			</div>
+			<div class="ball-bundle-row" style="margin-top: 6em;">
+				<div id="box8" class="number-check-box" ng-click="vm.changeBox8UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box8UseAt === 'N'}" ng-style="{'transform' : vm.box8UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box8UseAt === 'N'}">
+						8
+					</div>
+				</div>
+				<div id="box9" class="number-check-box" ng-click="vm.changeBox9UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box9UseAt === 'N'}" ng-style="{'transform' : vm.box9UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box9UseAt === 'N'}">
+						9
+					</div>
+				</div>
+				<div id="box10" class="number-check-box" ng-click="vm.changeBox10UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box10UseAt === 'N'}" ng-style="{'transform' : vm.box10UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box10UseAt === 'N'}">
+						10
+					</div>
+				</div>
+				<div id="box11" class="number-check-box" ng-click="vm.changeBox11UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box11UseAt === 'N'}" ng-style="{'transform' : vm.box11UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box11UseAt === 'N'}">
+						11
+					</div>
+				</div>
+				<div id="box12" class="number-check-box" ng-click="vm.changeBox12UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box12UseAt === 'N'}" ng-style="{'transform' : vm.box12UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box12UseAt === 'N'}">
+						12
+					</div>
+				</div>
+				<div id="box13" class="number-check-box" ng-click="vm.changeBox13UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box13UseAt === 'N'}" ng-style="{'transform' : vm.box13UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box13UseAt === 'N'}">
+						13
+					</div>
+				</div>
+				<div id="box14" class="number-check-box" ng-click="vm.changeBox14UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box14UseAt === 'N'}" ng-style="{'transform' : vm.box14UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box14UseAt === 'N'}">
+						14
+					</div>
+				</div>
+			</div>
+			<div class="ball-bundle-row" style="margin-top: 12em;">
+				<div id="box15" class="number-check-box" ng-click="vm.changeBox15UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box15UseAt === 'N'}" ng-style="{'transform' : vm.box15UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box15UseAt === 'N'}">
+						15
+					</div>
+				</div>
+				<div id="box16" class="number-check-box" ng-click="vm.changeBox16UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box16UseAt === 'N'}" ng-style="{'transform' : vm.box16UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box16UseAt === 'N'}">
+						16
+					</div>
+				</div>
+				<div id="box17" class="number-check-box" ng-click="vm.changeBox17UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box17UseAt === 'N'}" ng-style="{'transform' : vm.box17UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box17UseAt === 'N'}">
+						17
+					</div>
+				</div>
+				<div id="box18" class="number-check-box" ng-click="vm.changeBox18UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box18UseAt === 'N'}" ng-style="{'transform' : vm.box18UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box18UseAt === 'N'}">
+						18
+					</div>
+				</div>
+				<div id="box19" class="number-check-box" ng-click="vm.changeBox19UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box19UseAt === 'N'}" ng-style="{'transform' : vm.box19UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box19UseAt === 'N'}">
+						19
+					</div>
+				</div>
+				<div id="box20" class="number-check-box" ng-click="vm.changeBox20UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box20UseAt === 'N'}" ng-style="{'transform' : vm.box20UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box20UseAt === 'N'}">
+						20
+					</div>
+				</div>
+				<div id="box21" class="number-check-box" ng-click="vm.changeBox21UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box21UseAt === 'N'}" ng-style="{'transform' : vm.box21UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box21UseAt === 'N'}">
+						21
+					</div>
+				</div>
+			</div>
+			<div class="ball-bundle-row" style="margin-top: 18em;">
+				<div id="box22" class="number-check-box" ng-click="vm.changeBox22UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box22UseAt === 'N'}" ng-style="{'transform' : vm.box22UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box22UseAt === 'N'}">
+						22
+					</div>
+				</div>
+				<div id="box23" class="number-check-box" ng-click="vm.changeBox23UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box23UseAt === 'N'}" ng-style="{'transform' : vm.box23UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box23UseAt === 'N'}">
+						23
+					</div>
+				</div>
+				<div id="box24" class="number-check-box" ng-click="vm.changeBox24UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box24UseAt === 'N'}" ng-style="{'transform' : vm.box24UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box24UseAt === 'N'}">
+						24
+					</div>
+				</div>
+				<div id="box25" class="number-check-box" ng-click="vm.changeBox25UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box25UseAt === 'N'}" ng-style="{'transform' : vm.box25UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box25UseAt === 'N'}">
+						25
+					</div>
+				</div>
+				<div id="box26" class="number-check-box" ng-click="vm.changeBox26UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box26UseAt === 'N'}" ng-style="{'transform' : vm.box26UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box26UseAt === 'N'}">
+						26
+					</div>
+				</div>
+				<div id="box27" class="number-check-box" ng-click="vm.changeBox27UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box27UseAt === 'N'}" ng-style="{'transform' : vm.box27UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box27UseAt === 'N'}">
+						27
+					</div>
+				</div>
+				<div id="box28" class="number-check-box" ng-click="vm.changeBox28UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box28UseAt === 'N'}" ng-style="{'transform' : vm.box28UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box28UseAt === 'N'}">
+						28
+					</div>
+				</div>
+			</div>
+			<div class="ball-bundle-row" style="margin-top: 24em;">
+				<div id="box29" class="number-check-box" ng-click="vm.changeBox29UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box29UseAt === 'N'}" ng-style="{'transform' : vm.box29UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box29UseAt === 'N'}">
+						29
+					</div>
+				</div>
+				<div id="box30" class="number-check-box" ng-click="vm.changeBox30UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box30UseAt === 'N'}" ng-style="{'transform' : vm.box30UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box30UseAt === 'N'}">
+						30
+					</div>
+				</div>
+				<div id="box31" class="number-check-box" ng-click="vm.changeBox31UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box31UseAt === 'N'}" ng-style="{'transform' : vm.box31UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box31UseAt === 'N'}">
+						31
+					</div>
+				</div>
+				<div id="box32" class="number-check-box" ng-click="vm.changeBox32UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box32UseAt === 'N'}" ng-style="{'transform' : vm.box32UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box32UseAt === 'N'}">
+						32
+					</div>
+				</div>
+				<div id="box33" class="number-check-box" ng-click="vm.changeBox33UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box33UseAt === 'N'}" ng-style="{'transform' : vm.box33UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box33UseAt === 'N'}">
+						33
+					</div>
+				</div>
+				<div id="box34" class="number-check-box" ng-click="vm.changeBox34UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box34UseAt === 'N'}" ng-style="{'transform' : vm.box34UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box34UseAt === 'N'}">
+						34
+					</div>
+				</div>
+				<div id="box35" class="number-check-box" ng-click="vm.changeBox35UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box35UseAt === 'N'}" ng-style="{'transform' : vm.box35UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box35UseAt === 'N'}">
+						35
+					</div>
+				</div>
+			</div>
+			<div class="ball-bundle-row" style="margin-top: 30em;">
+				<div id="box36" class="number-check-box" ng-click="vm.changeBox36UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box36UseAt === 'N'}" ng-style="{'transform' : vm.box36UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box36UseAt === 'N'}">
+						36
+					</div>
+				</div>
+				<div id="box37" class="number-check-box" ng-click="vm.changeBox37UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box37UseAt === 'N'}" ng-style="{'transform' : vm.box37UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box37UseAt === 'N'}">
+						37
+					</div>
+				</div>
+				<div id="box38" class="number-check-box" ng-click="vm.changeBox38UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box38UseAt === 'N'}" ng-style="{'transform' : vm.box38UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box38UseAt === 'N'}">
+						38
+					</div>
+				</div>
+				<div id="box39" class="number-check-box" ng-click="vm.changeBox39UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box39UseAt === 'N'}" ng-style="{'transform' : vm.box39UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box39UseAt === 'N'}">
+						39
+					</div>
+				</div>
+				<div id="box40" class="number-check-box" ng-click="vm.changeBox40UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box40UseAt === 'N'}" ng-style="{'transform' : vm.box40UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box40UseAt === 'N'}">
+						40
+					</div>
+				</div>
+				<div id="box41" class="number-check-box" ng-click="vm.changeBox41UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box41UseAt === 'N'}" ng-style="{'transform' : vm.box41UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box41UseAt === 'N'}">
+						41
+					</div>
+				</div>
+				<div id="box42" class="number-check-box" ng-click="vm.changeBox42UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box42UseAt === 'N'}" ng-style="{'transform' : vm.box42UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box42UseAt === 'N'}">
+						42
+					</div>
+				</div>
+			</div>
+			<div class="ball-bundle-row" style="margin-top: 36em;">
+				<div id="box43" class="number-check-box" ng-click="vm.changeBox43UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box43UseAt === 'N'}" ng-style="{'transform' : vm.box43UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box43UseAt === 'N'}">
+						43
+					</div>
+				</div>
+				<div id="box44" class="number-check-box" ng-click="vm.changeBox44UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box44UseAt === 'N'}" ng-style="{'transform' : vm.box44UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box44UseAt === 'N'}">
+						44
+					</div>
+				</div>
+				<div id="box45" class="number-check-box" ng-click="vm.changeBox45UseAt()" ng-dblclick="false" ng-class="{'back' : vm.box45UseAt === 'N'}" ng-style="{'transform' : vm.box45UseAt === 'N' ? 'rotateY(-180deg)' : 'rotateY(0deg)'}">
+					<div class="box-number" ng-class="{'back' : vm.box45UseAt === 'N'}">
+						45
+					</div>
+				</div>
+				<div class="number-check-box rest">
+					<div class="box-number">
+						46
+					</div>
+				</div>
+				<div class="number-check-box rest">
+					<div class="box-number">
+						47
+					</div>
+				</div>
+				<div id="box48" class="number-check-box" style="background-color: #ff9800; border-color: #fb8c00;" ng-click="vm.reverse()" ng-dblclick="false">
+					<div class="box-number">
+						<i class="fa fa-fw fa-ban"></i>
+					</div>
+				</div>
+				<div id="box49" class="number-check-box btn-reset" style="background: #8bc34a; border-color: #7cb342;" ng-click="vm.reset()" ng-dblclick="false">
+					<div class="box-number">
+						<i class="fa fa-fw fa-refresh iconsRotate"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="result-button" ng-click="vm.run(vm.originalList)" ng-dblclick="false">
+			<div style="color:white; font-size:4rem;">
+				실 행
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
